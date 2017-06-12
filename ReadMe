@@ -1,0 +1,43 @@
+This is Spring boot restful application.
+
+Softwares and tools used:
+Spring boot
+maven
+Eclipse as an editor for development
+Postman plugin app for Restful web service testing
+
+Deployment process:
+
+Download this source code and compile and build using maven
+command: mvn clean install on project folder
+
+run and deploy:
+mvn spring-boot:run on project folder 
+
+testing:
+
+first approach: execute test cases which are there on the test folder: FootBallTeamsTestClient
+
+second approach: install postman app on chrome for Restful web service testing.
+//create a team
+/*
+Example format in the body on postman app to create a team
+{
+    "name": "team2",
+    "city": "Luton",
+    "owner": "Tom M",
+    "stadiumCapacity": 29000,
+    "competition": "UEFA",
+    "numberOfPlayers": 25,
+    "dateOfCreation": "03-05-2010"
+}
+*/
+http://localhost:8080/FootBallTeams/api/team/
+
+//get list of teams
+http://localhost:8080/FootBallTeams/api/teams/
+
+//For teams by stadium capactiy
+http://localhost:8080/FootBallTeams/api/teambystadiumcapacity
+//Retrieve team by name
+http://localhost:8080/FootBallTeams/api/team/ManchesterUnited
